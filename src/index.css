@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+:root{
+  --primary: #1001F4;
+  --accent: #FEE101;
+}
+
+body{
+  @apply bg-white text-gray-800 font-sans;
+}
+
+.card-shadow{ box-shadow: 0 6px 18px rgba(16,1,244,0.08); }
