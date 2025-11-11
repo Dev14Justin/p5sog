@@ -4,11 +4,10 @@ import { Linkedin, Link } from "lucide-react";
 const devInfo = {
   name: "Justin MONDJI",
   role: "Développeur Full Stack — Initiateur du programme 'P5SOG'",
-  mission:
-    "Mon Objectif à travers ce programme est simple : apporter de la valeur aux entrepreneurs de mon environnement, en leur offrant les outils pour transformer leurs idées en solutions digitales performantes.",
+  mission: "Mon Objectif à travers ce programme est simple : apporter de la valeur aux entrepreneurs de mon environnement, en leur offrant les outils pour transformer leurs idées en solutions digitales performantes.",
   portfolioUrl: "https://justin-mondji.vercel.app",
-  linkedinUrl: "#",
-  imageUrl: "public/justin_mondji.jpg",
+  linkedinUrl: "https://www.linkedin.com/in/justin-mondji-976b1a303/",
+  imageUrl: "./public/justin_mondji.jpg",
 };
 
 const DeveloperSection = () => {
