@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { HeartHandshake } from "lucide-react";
 
@@ -34,9 +33,10 @@ const PartnershipSection = () => {
                 src={partnerInfo.logoUrl}
                 alt={`Logo du partenaire ${partnerInfo.name}`}
                 className="max-h-16 w-auto opacity-90"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
+                onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src =
                     "https://placehold.co/150x50/FFFFFF/1001F4?text=OPTIX+LOGO";
                 }}
               />

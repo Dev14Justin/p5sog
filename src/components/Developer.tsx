@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Link } from "lucide-react";
 
@@ -39,9 +38,10 @@ const DeveloperSection = () => {
                 src={devInfo.imageUrl}
                 alt={`Photo de ${devInfo.name}`}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
+                onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src =
                     "https://placehold.co/400x400/FEE101/1001F4?text=J.M.";
                 }}
               />

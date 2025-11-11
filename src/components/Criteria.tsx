@@ -57,7 +57,15 @@ const itemVariants = {
   },
 };
 
-const CriteriaStep = ({ icon: Icon, title, description, number, index }) => {
+interface CriteriaStepProps {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  number: string;
+  index: number;
+}
+
+const CriteriaStep = ({ icon: Icon, title, description, number, index }: CriteriaStepProps) => {
   return (
     <motion.div
       variants={itemVariants}

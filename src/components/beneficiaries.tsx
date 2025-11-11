@@ -1,8 +1,16 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 
-const beneficiariesData = [
+interface Beneficiary {
+  name: string;
+  title: string;
+  projectType: string;
+  description: string;
+  imageUrl: string;
+  linkedinUrl: string;
+}
+
+const beneficiariesData: Beneficiary[] = [
   {
     name: "Damande TOGOU ",
     title: "Ingénieur Agronome",
@@ -72,7 +80,12 @@ const cardVariants = {
   },
 };
 
-const BeneficiaryCard = ({ beneficiary, index }) => {
+interface BeneficiaryCardProps {
+  beneficiary: Beneficiary;
+  index: number;
+}
+
+const BeneficiaryCard = ({ beneficiary, index }: BeneficiaryCardProps) => {
   return (
     <motion.div
       variants={cardVariants}
@@ -88,11 +101,12 @@ const BeneficiaryCard = ({ beneficiary, index }) => {
             src={beneficiary.imageUrl}
             alt={`Photo de ${beneficiary.name}`}
             className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-[hsl(var(--accent))]"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = `https://placehold.co/100x100/1001F4/FEE101?text=${beneficiary.name
+            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = `https://placehold.co/100x100/1001F4/FEE101?text=${beneficiary.name
                 .split(" ")
-                .map((n) => n[0])
+                .map((n: string) => n[0])
                 .join(".")}`;
             }}
           />
