@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
-
-:root{
-  --primary: #1001F4;
-  --accent: #FEE101;
+:root {
+  --primary: 245 99% 48%;        /* #1001F4 */
+  --accent: 52 100% 50%;         /* #FEE101 */
+  --primary-dark: 245 99% 38%;   /* #0D01C3 */
+  --primary-light: 245 100% 94%; /* #E7E6FF */
+  --primary-medium: 245 99% 48% / 0.1; /* rgba(16,1,244,0.1) */
+  --accent-dark: 52 99% 45%;     /* #E5CA01 */
+  --accent-light: 52 100% 96%;   /* #FFFBE6 */
+  --shadow-card: 245 99% 48% / 0.08; /* rgba(16,1,244,0.08) */
 }
 
-body{
-  @apply bg-white text-gray-800 font-sans;
+@layer base {
+  body {
+    @apply bg-white text-gray-800 font-sans antialiased;
+  }
 }
 
-.card-shadow{ box-shadow: 0 6px 18px rgba(16,1,244,0.08); }
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 6px 18px hsl(var(--shadow-card));
+  }
+}

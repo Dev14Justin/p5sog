@@ -1,34 +1,77 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import BackgroundAnimation from "./BackgroundAnimation";
 
-export default function Hero() {
+const HeroSection = () => {
+  const name = "P5SOG";
+  const title =
+    "Programme de digitalisation des projets en développement";
+  const subtitle =
+    "Découvrez les candidats retenus et les projets qui profiteront d’une transformation digitale complète.";
+
   return (
-    <section id="home" className="pt-24 pb-12">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl font-bold text-[var(--primary)]">
-            Les 5 bénéficiaires du programme <span className="text-[var(--accent)]">5 Sites Offerts Gratuitement</span>
+    <section id="Hero" className="w-full py-4 sm:py-6 lg:py-8">
+      <div className="relative flex flex-col items-center justify-center mx-4 sm:mx-6 lg:mx-10 p-8 sm:p-12 md:p-16 lg:p-20 text-center text-white bg-[hsl(var(--primary))] overflow-hidden rounded-lg shadow-lg">
+        <BackgroundAnimation />
+
+        <div className="relative z-10 flex flex-col items-center max-w-6xl">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-xl md:text-4xl font-regular mb-4"
+          >
+            {name}
           </motion.h1>
 
-          <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }} className="mt-4 text-lg text-gray-700">
-            Découvrez les projets qui vont bénéficier d’un accompagnement complet pour leur transformation digitale.
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight"
+          >
+            {title}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-xl max-w-2xl opacity-90 mb-10"
+          >
+            {subtitle}
           </motion.p>
 
-          <div className="mt-6 flex gap-4">
-            <a href="#beneficiaries" className="px-5 py-3 rounded-md bg-[var(--primary)] text-white font-semibold">Voir les bénéficiaires</a>
-            <a href="#about" className="px-5 py-3 rounded-md border border-[var(--primary)] text-[var(--primary)]">En savoir plus</a>
-          </div>
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-[hsl(var(--accent))] text-black font-bold py-3 px-8 rounded-full text-lg hover:text-white hover:bg-[hsl(var(--accent-dark))] transition-all duration-300 transform hover:scale-105 shadow-lg"
+            onClick={() => console.log("Voir les bénéficiaires cliqué !")}
+          >
+            <a href="#beneficiaries">Voir les bénéficiaires</a>
+          </motion.button>
         </div>
 
-        <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.6 }} className="flex justify-center">
-          <div className="w-full max-w-md card-shadow rounded-2xl overflow-hidden bg-gradient-to-br from-white to-blue-50 p-6">
-            <img src="/images/hero-illustration.jpg" alt="illustration" className="w-full h-56 object-cover rounded-md" />
-            <div className="mt-4">
-              <h3 className="font-semibold">Programme 1ère édition</h3>
-              <p className="text-sm text-gray-600 mt-1">Accompagnement, conception, publication.</p>
-            </div>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{
+            opacity: 1,
+            y: [0, 10, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.2,
+          }}
+          className="absolute bottom-5 z-10"
+        >
+          <ChevronDown size={48} className="text-white opacity-80" />
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default HeroSection;

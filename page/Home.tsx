@@ -5,6 +5,7 @@ import BeneficiariesList from "../src/components/beneficiaries";
 import Criteria from "../src/components/Criteria";
 import Developer from "../src/components/Developer";
 import Footer from "../src/components/Footer";
+import Partnership from "../src/components/Partnership";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <BeneficiariesList />
         <Criteria />
         <Developer />
+        <Partnership />
       </main>
       <Footer />
     </div>
