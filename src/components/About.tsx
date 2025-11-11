@@ -1,8 +1,13 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Target, TrendingUp, Zap, Settings } from "lucide-react";
 
-const objectives = [
+interface Objective {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}
+
+const objectives: Objective[] = [
   {
     icon: Target,
     title: "Digitaliser les entreprises locales",
@@ -28,7 +33,11 @@ const objectives = [
   },
 ];
 
-const ObjectiveCard = ({ icon: Icon, title, description, index }) => {
+interface ObjectiveCardProps extends Objective {
+  index: number;
+}
+
+const ObjectiveCard = ({ icon: Icon, title, description, index }: ObjectiveCardProps) => {
   const isPrimary = index % 2 === 0;
 
   const cardClasses = isPrimary
