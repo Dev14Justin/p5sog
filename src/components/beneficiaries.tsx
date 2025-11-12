@@ -16,7 +16,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Ingénieur Agronome",
     projectType: "Site E-commerce et de formation",
     description: " « PAFA » est un programme de formation et d’accompagnement en agroécologie, axé sur les bonnes pratiques agricoles durables et la valorisation commerciale des produits locaux.",
-    imageUrl: "/public/b-5.jpg",
+    imageUrl: "/b-5.jpg",
     linkedinUrl: "https://www.linkedin.com/in/damande-togou-9b907a334/",
   },
   {
