@@ -7,7 +7,7 @@ const devInfo = {
   mission: "Mon Objectif à travers ce programme est simple : apporter de la valeur aux entrepreneurs de mon environnement, en leur offrant les outils pour transformer leurs idées en solutions digitales performantes.",
   portfolioUrl: "https://justin-mondji.vercel.app",
   linkedinUrl: "https://www.linkedin.com/in/justin-mondji-976b1a303/",
-  imageUrl: "./public/justin_mondji.jpg",
+  imageUrl: "/justin_mondji.jpg",
 };
 
 const DeveloperSection = () => {

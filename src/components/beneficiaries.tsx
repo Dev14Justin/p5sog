@@ -16,7 +16,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Ingénieur Agronome",
     projectType: "Site E-commerce et de formation",
     description: " « PAFA » est un programme de formation et d’accompagnement en agroécologie, axé sur les bonnes pratiques agricoles durables et la valorisation commerciale des produits locaux.",
-    imageUrl: "./public/b-5.jpg",
+    imageUrl: "/public/b-5.jpg",
     linkedinUrl: "https://www.linkedin.com/in/damande-togou-9b907a334/",
   },
   {
@@ -24,7 +24,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Stratège en Acquisition Clients",
     projectType: "Site Vitrine Professionnel",
     description: "« ENTREPRENEURS EPANOUIS » est une agence de marketing spécialisé en Stratégie d'Acquisition de Clients pour les Coachs et Consultants du domaine des relations humaines",
-    imageUrl: "./public/b-3.png",
+    imageUrl: "/b-3.png",
     linkedinUrl: "https://www.linkedin.com/in/eli-koffi-adorgloh/",
   },
   {
@@ -32,7 +32,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Agronome",
     projectType: "Site Professionnel et de Formation",
     description: "« Parlons Business en Agronomie » est un projet qui aide les acteurs agricoles à devenir rentables grâce à la recherche, aux conseils, aux témoignages et à la formation adaptés à leur réalité.",
-    imageUrl: "./public/b-1.jpg",
+    imageUrl: "/b-1.jpg",
     linkedinUrl:
       "https://www.linkedin.com/in/narcisse-assiou-4b853a264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
@@ -41,7 +41,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Senior Internal Audit",
     projectType: "Site de reservation et de ressources",
     description: "« LMA » est un projet qui accompagne les entrepreneurs africains dans les domaines de la gouvernance, des risques, de la finance, de la tech et de l’audit. Elle propose des solutions adaptées pour renforcer leur performance et impact économique",
-    imageUrl: "./public/b-4.jpg",
+    imageUrl: "/b-4.jpg",
     linkedinUrl: "https://www.linkedin.com/in/kossiwa-sama-cia-486ab292/",
   },
   {
@@ -49,7 +49,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Formateure Auto-Ecole",
     projectType: "Site Vitrine Professionnel ",
     description: "« AUTO ÉCOLE AGRÉÉE LA CAPITALE » est un centre de formation dédié à l’apprentissage de la conduite, offrant un encadrement rigoureux, des méthodes modernes et un accompagnement personnalisé pour garantir la réussite de chaque apprenant.",
-    imageUrl: "./public/b-6.jpg",
+    imageUrl: "/b-6.jpg",
     linkedinUrl:
       "https://www.linkedin.com/in/code-la-capitale-7b6501395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
@@ -58,7 +58,7 @@ const beneficiariesData: Beneficiary[] = [
     title: "Artiste Pluridisciplinaire",
     projectType: "Platforme de galerie Numérique",
     description: "« @Le cauris » est un projet qui vise a promouvoir, communiquer et faire connaître les œuvres africaines au monde entier. De la musique à la danse, en passant par l'artisanat et les arts visuels, nous mettons en avant la richesse de l'expression artistique africaine.",
-    imageUrl: "./public/b-0.jpg",
+    imageUrl: "/b-0.jpg",
     linkedinUrl: "https://www.facebook.com/share/16UtVBHnnL/",
   },
 ];

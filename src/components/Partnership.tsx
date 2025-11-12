@@ -3,7 +3,7 @@ import { HeartHandshake } from "lucide-react";
 
 const partnerInfo = {
   name: "Optix",
-  logoUrl: "./public/lg-sans fond.png",
+  logoUrl: "/lg-sans fond.png",
 };
 
 const PartnershipSection = () => {
